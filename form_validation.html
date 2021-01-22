@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Contact Details</title>
+        <script type="application/javascript">
+            function checkdata() {
+                var username = document.getElementById("name");
+                var emailid = document.getElementById("email");
+                var zipcode = document.getElementById("zipcode");
+
+                if (username.value == "") {
+                    alert ("Please Enter the Name")
+                    username.focus(); //This statememt bring your cursor to focus the input
+                    return false;
+                }
+                if (emailid.value == "") {
+                    alert ("Please Enter the Email")
+                    emailid.focus();
+                    return false;
+                }
+                if (zipcode.value == "") {
+                    alert ("Please Enter the Zipcode")
+                    zipcode.focus();
+                    return false;
+                }
+                if (zipcode.value == "") {
+                    alert ("Please Enter the Zipcode")
+                    zipcode.focus();
+                    return false;
+                }
+                //if username and email is right return true
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Enter your contact Details : </h2>
+        <form id="form" onsubmit="return checkdata()"> 
+            <label for="name">Name : </label>
+            <input type="text" id="name" name="name">
+            <br>
+            <br>
+            <label for="email">Email : </label>
+            <input type="email" id="email" name="email">
+            <br>
+            <br>
+            <label for="zipcode" >Zipcode</label>
+            <input type="number" id="zipcode" name="zipcode">
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+
+    </body>
+
+</html>
